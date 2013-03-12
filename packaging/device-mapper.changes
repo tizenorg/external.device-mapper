@@ -1,0 +1,14 @@
+* Wed Jan 05 2011 Paolo Capriotti <paolo.capriotti@collabora.co.uk> - 1.02.60
+- Update to latest upstream version (fixes BMC#12710)
+- Build from LVM2 source.
+- Remove obsolete patch.
+
+* Thu Dec 25 2008 Arjan van de Ven <arjan@linux.intel.com> 1.02.28
+- Fix Source: to be a resolvable URL
+
+* Tue Dec 09 2008 Yi Yang <yi.y.yang@intel.com> 1.02.28
+- Upgrade to 1.02.28
+- Fixed corrupt primary.xml.gz introduced by libdevmapper.pc
+
+* Sun Nov 02 2008 Anas Nashif <anas.nashif@intel.com> 1.02.24
+- fixed file list
