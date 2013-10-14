@@ -53,6 +53,9 @@ make device-mapper
 
 %install
 rm -rf $RPM_BUILD_ROOT
+mkdir -p %{buildroot}/usr/share/license
+cp COPYING %{buildroot}/usr/share/license/%{name}
+cat COPYING.LIB >> %{buildroot}/usr/share/license/%{name}  
 make install_device-mapper DESTDIR=$RPM_BUILD_ROOT usrlibdir=$RPM_BUILD_ROOT/usr/%{_lib}
 sed -i 's/ (.*)//g' $RPM_BUILD_ROOT%{_libdir}/pkgconfig/*.pc
 
@@ -68,6 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING COPYING.LIB INSTALL README VERSION_DM WHATS_NEW_DM
 %attr(755,root,root) %{_sbindir}/dmsetup
 %{_mandir}/man8/dmsetup.8.gz
+/usr/share/license/%{name}
 
 %files -n device-mapper-devel
 %defattr(-,root,root,-)
